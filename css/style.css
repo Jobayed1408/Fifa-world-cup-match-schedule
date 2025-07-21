@@ -14,6 +14,7 @@ body {
 }
 
 .nav {
+  margin: 0 30px;
   margin-top: 50px;
   border-radius: 12px;
   display: grid;
@@ -105,6 +106,13 @@ body {
   gap: 20px;
 }
 
+.match-right img {
+  width: 100%;
+  aspect-ratio: 16/9; /* or 1 / 1 for square, or 16 / 9 for wide */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 .match-content button,
 .match-content p {
   margin-left: 30px;
@@ -123,17 +131,12 @@ body {
   border-radius: 5px;
 }
 
-.match-right img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
 
 .footer{
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: black;
   color: white;
-  padding: 100px;
+  padding: 100px 0;
 }
 
 .footer h2{
@@ -141,10 +144,11 @@ body {
 }
 
 .footer hr {
+  width: 80%;
   border: none;
   height: 1px;
   background-color: rgb(145, 145, 145);
-  margin: 50px 0;
+  margin: 50px auto;
 }
 
 .footer-links ul{
@@ -162,13 +166,13 @@ body {
 @media (max-width: 639px) {
   body{
     background-color: rgb(241, 241, 241);
+    
   }
   .nav {
+    margin: 10px 10px ;
     margin-top: 0;
     grid-template-columns: 1fr;
-    /* Stack columns vertically */
     padding: 20px 20px 0 20px;
-    /* Adjust padding for smaller screens */
     gap: 20px;
     text-align: center;
   }
@@ -194,6 +198,7 @@ body {
   }
 
   .matches {
+    padding: 10px 10px ;
     grid-template-areas: "matchleft" "matchright";
     /* Stack sections vertically */
     gap: 20px;
@@ -214,6 +219,14 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .footer{
+    padding: 20px 0;
+  }
+  
+  .footer hr{
+    margin: 20px auto;
+  }
+
   .footer-links ul{
     padding-top: 10px;
     flex-direction: column;
@@ -226,7 +239,11 @@ body {
   body {
     background-color: rgb(230, 230, 230);
   }
+  .nav{
+    margin: 0 20px;
+  }
   .matches{
+    margin: 0 20px;
     display: block;
   }
   .match-left{
@@ -250,8 +267,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-links ul{
+    width: 70%;
+    margin: 0 auto; 
     flex-wrap: wrap;
   }
   
-
 }
