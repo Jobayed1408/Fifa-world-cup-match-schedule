@@ -9,11 +9,13 @@
 }
 
 body {
-  max-width: 1380px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .nav {
+  margin-top: 50px;
+  border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -40,6 +42,15 @@ body {
   padding-right: 20px;
   line-height: 1.5rem;
 }
+
+.nav-content h2,
+  .nav-content p{
+    padding-top: 20px;
+  }
+
+  .nav-content button{
+    margin-top: 20px;
+  }
 
 .nav-image {
   display: flex;
@@ -115,7 +126,7 @@ body {
 .match-right img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .footer{
@@ -153,6 +164,7 @@ body {
     background-color: rgb(241, 241, 241);
   }
   .nav {
+    margin-top: 0;
     grid-template-columns: 1fr;
     /* Stack columns vertically */
     padding: 20px 20px 0 20px;
