@@ -1,0 +1,245 @@
+/* CSS for the navigation section with responsive design */
+
+/* Existing styles (no change) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 10px 0 100px;
+  background-color: black;
+  color: white;
+}
+
+.btn-nav{
+  padding: 12px 20px;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: rgb(233, 48, 48);
+  color: white;
+  border: none;
+}
+.btn-nav i{
+  padding-left: 8px;
+}
+
+.nav-content {
+  padding-right: 20px;
+  line-height: 1.5rem;
+}
+
+.nav-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-image img {
+  width: 100%;
+  max-width: 500px;
+  /* Prevents image from getting too large */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Matche Shedule */
+
+.btn-secondary {
+  padding: 20px;
+  border-radius: .8rem;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid rgb(110, 110, 110);
+}
+
+
+.matches {
+  grid-template-areas: "matchleft matchright";
+  display: grid;
+  margin-top: 50px;
+  gap: 20px;
+  align-self: start;
+}
+
+.match-left {
+  grid-area: matchleft;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  align-self: start;
+}
+
+.match-right {
+  grid-area: matchright;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.match-content button,
+.match-content p {
+  margin-left: 30px;
+  margin-top: 12px;
+}
+
+.match-content p {
+  width: 60%;
+}
+
+.match-content button {
+  padding: 8px 24px;
+  font-size: medium;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.match-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer{
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  padding: 100px;
+}
+
+.footer h2{
+  text-align: center;
+}
+
+.footer hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(145, 145, 145);
+  margin: 50px 0;
+}
+
+.footer-links ul{
+  padding-top: 50px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 639px) {
+  body{
+    background-color: rgb(241, 241, 241);
+  }
+  .nav {
+    grid-template-columns: 1fr;
+    /* Stack columns vertically */
+    padding: 20px 20px 0 20px;
+    /* Adjust padding for smaller screens */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-content {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .nav-content h2,
+  .nav-content p{
+    padding-top: 20px;
+  }
+
+  .nav-description{
+    padding-bottom: 20px;
+  }
+
+  .nav-image img {
+    max-width: 100%;
+    /* Image fills container width */
+    height: auto;
+  }
+
+  .matches {
+    grid-template-areas: "matchleft" "matchright";
+    /* Stack sections vertically */
+    gap: 20px;
+  }
+
+  .match-left {
+    background-color: transparent;
+    align-items: center;
+  }
+
+  .btn-secondary {
+    padding: 16px 80px;
+    font-weight: 700;
+    font-size: large;
+  }
+
+  .match-right {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links ul{
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px){
+  body {
+    background-color: rgb(230, 230, 230);
+  }
+  .matches{
+    display: block;
+  }
+  .match-left{
+    background-color: transparent;
+    flex-direction: row;
+    width: 100%;
+    
+    justify-content: center;
+  }
+
+  .match-left button{
+    flex: 1;
+  }
+  .match-left button:last-child {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+  }
+
+  .match-right{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-links ul{
+    flex-wrap: wrap;
+  }
+  
+
+}
